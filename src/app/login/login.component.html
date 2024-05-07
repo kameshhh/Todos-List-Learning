@@ -1,7 +1,17 @@
 <h1>Login</h1>
+<<<<<<< HEAD
 <small *ngIf='invalidLogin'>{{errorMessage}}</small>
 <div>
     User name: <input type="text" name="username" [(ngModel)]="username">
     Password: <input type="password" name="password" [(ngModel)]="password">
     <button class="btn btn-success mx-2 " (click)=handleLogin()> Login </button>
+=======
+<div class="container">
+    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+    <div>
+        User name: <input type="text" name="username" [(ngModel)]="username">
+        Password: <input type="password" name="password" [(ngModel)]="password">
+        <button (click)=handleLogin()> Login </button>
+    </div>
+>>>>>>> 81488661b844a6ca62a8280619b635afb36b04e4
 </div>
