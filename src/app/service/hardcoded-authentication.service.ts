@@ -8,10 +8,10 @@ export class HardcodedAuthenticationService {
   constructor() { }
 
   authenticate(username: string,password: string){
-    console.log('Before '+ this.isUserLoggedIn());
+    // console.log('Before '+ this.isUserLoggedIn());
     if(username==="kamesh" && password==="dummy"){
       sessionStorage.setItem('authenticaterUser',username) ;   
-      console.log('After '+ this.isUserLoggedIn());
+      // console.log('After '+ this.isUserLoggedIn());
       return true;
 
     }
@@ -25,7 +25,12 @@ export class HardcodedAuthenticationService {
       } else {
           return false; // User is not logged in
       }
+
   
+  }
+
+  logout(){
+    sessionStorage.removeItem('authenticaterUser');
   }
 
 
