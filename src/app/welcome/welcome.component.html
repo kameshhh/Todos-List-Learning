@@ -1,5 +1,6 @@
 <h1>Welcome</h1>
 <div class="container">
+    <div *ngIf='errorMessageFromService' class="alert alert-primary">{{errorMessageFromService}}</div>
     <div>
         Welcome - {{name}}
     </div>
@@ -9,11 +10,14 @@
 
     <div class="container">Click here to get customized welcome message
         <button (click)="getWelcomeMessage()" class="btn btn-success">Get Welcome Message</button>
+        <button (click)="getWelcomeMessageWithVariable()" class="btn btn-success mx-2">Get Welcome Message With Parameter</button>
     </div>
+    
 
     <div class="container" *ngIf="welcomeMessageFromService">
         <h1>Your customized welcome message</h1>
         {{welcomeMessageFromService}}
         
     </div>
+    
 </div>
